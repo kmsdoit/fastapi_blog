@@ -5,7 +5,9 @@ from core.database.base import engine
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
 app.include_router(user_router.router)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
